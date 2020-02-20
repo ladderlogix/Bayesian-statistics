@@ -128,8 +128,8 @@ while not done:
     clock.tick(60)
     #Finding algrothmom
     if (Debug == 1 or Debug == 2):
-        print(GuessX)
-        print(GuessY)
+        print("X is " + GuessX)
+        print("Y is " + GuessY)
     if (Debug == 1 or Debug == 3):
         grid[GuessY][GuessX] = 2
 
