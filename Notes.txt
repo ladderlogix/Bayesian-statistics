@@ -1,0 +1,19 @@
+XValue, range 0-100
+YValue, range 0-200
+
+GuessX, range of 0-200
+GuessY, range of 0-100
+
+if RANDOMNUMBER less than or equal to 51 
+201 x 101 grid size
+
+Error one always goes to the top left
+
+Grid X and Y
+Y and X
+GRID(y,X)
+Debug modes
+1 - off
+2 - Draw guess off
+3 - print off
+4 - Draw and Guess off
