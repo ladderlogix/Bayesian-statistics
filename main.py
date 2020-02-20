@@ -39,7 +39,9 @@ for row in range(301): #X
 # column numbers start at zero.)
 XValue = random.randint(0,100)
 YValue = random.randint(0,200)
+print("Blue X is:")
 print(XValue)
+print("Blue Y is:")
 print(YValue)
 grid[XValue][YValue] = 3
 #grid[XValue + 1][YValue - 1] = 3
@@ -128,11 +130,12 @@ while not done:
     clock.tick(60)
     #Finding algrothmom
     if (Debug == 1 or Debug == 2):
-        print("X is " + GuessX)
-        print("Y is " + GuessY)
+        print("Guess X:")
+        print(GuessX)
+        print(GuessY)
     if (Debug == 1 or Debug == 3):
         grid[GuessY][GuessX] = 2
-
+        
     if (GuessX == XValue and GuessY == YValue):
         print("Done")
         print(Guess)
