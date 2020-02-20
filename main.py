@@ -132,6 +132,7 @@ while not done:
     if (Debug == 1 or Debug == 2):
         print("Guess X:")
         print(GuessX)
+        print("Guess Y:")
         print(GuessY)
     if (Debug == 1 or Debug == 3):
         grid[GuessY][GuessX] = 2
