@@ -24,6 +24,7 @@ WIDTH = Settings["WIDTH"]
 HEIGHT = Settings["HEIGHT"]
 MARGIN = Settings["MARGIN"]
 Debug = Settings["Debug"]
+TestMode = Settings["Test"]
 
 # Create a 2 dimensional array. A two dimensional
 # array is simply a list of lists.
