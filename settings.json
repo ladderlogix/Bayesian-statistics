@@ -1,0 +1,11 @@
+{
+    "GuessX": 101,
+    "GuessY": 51, 
+    "Guess": 0, 
+    "LockerX": 20,
+    "LockerY": 20, 
+    "WIDTH": 5, 
+    "HEIGHT": 5, 
+    "MARGIN": 1,
+    "Debug": 1
+}
