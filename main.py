@@ -146,7 +146,7 @@ while not done:
             GuessX = clampX(GuessX, 0, 200)
             Guess += 1
             if (Debug == 1 or Debug == 2):
-                print("True")
+                print("X is True")
             
 
         else:
@@ -160,7 +160,7 @@ while not done:
             Guess += 1
             LockerX -= 1
             if (Debug == 1 or Debug == 2):
-                print("Else")
+                print("X is Else")
 
         if YValue <= GuessY:
             GuessY = GuessY / 2
@@ -169,7 +169,7 @@ while not done:
             GuessY = clampY(GuessY, 0, 100)
             Guess += 1
             if (Debug == 1 or Debug == 2):
-                print("True")
+                print("Y is True")
 
         else:
             GuessY = GuessY/2
@@ -182,7 +182,7 @@ while not done:
             Guess += 1
             LockerY -= 1
             if (Debug == 1 or Debug == 2):
-                print("Else")
+                print("Y is Else")
 
     #pygame.draw.rect(screen, BLUE, ErrorAreap)
     pygame.display.flip()
