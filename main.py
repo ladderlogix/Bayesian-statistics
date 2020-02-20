@@ -151,6 +151,8 @@ while not done:
 
         else:
             GuessX = GuessX/2
+            if Guess >= 2:
+                LockerX -= 8
             GuessX = GuessX + GuessX + LockerX + LockerX
             GuessX = math.ceil(GuessX)
             GuessX = abs(GuessX)
@@ -171,6 +173,8 @@ while not done:
 
         else:
             GuessY = GuessY/2
+            if Guess >= 2:
+                LockerY -= 8
             GuessY = GuessY + GuessY + LockerY + LockerY
             GuessY = math.ceil(GuessY)
             GuessY = abs(GuessY)
