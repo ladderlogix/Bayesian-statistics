@@ -17,3 +17,5 @@ Debug modes
 2 - Draw guess off
 3 - print off
 4 - Draw and Guess off
+
+Add where the user could place ball

@@ -24,7 +24,7 @@ WIDTH = Settings["WIDTH"]
 HEIGHT = Settings["HEIGHT"]
 MARGIN = Settings["MARGIN"]
 Debug = Settings["Debug"]
-TestMode = Settings["Test"]
+
 
 # Create a 2 dimensional array. A two dimensional
 # array is simply a list of lists.
@@ -154,18 +154,18 @@ while not done:
                 print("X is True")
             
 
-        else:
-            GuessX = GuessX/2
-            if Guess >= 2:
-                LockerX -= 8
-            GuessX = GuessX + GuessX + LockerX + LockerX
-            GuessX = math.ceil(GuessX)
-            GuessX = abs(GuessX)
-            GuessX = clampX(GuessX, 0, 200)
-            Guess += 1
-            LockerX -= 1
-            if (Debug == 1 or Debug == 2):
-                print("X is Else")
+            else:
+                GuessX = GuessX/2
+                if Guess >= 2:
+                    LockerX -= 8
+                GuessX = GuessX + GuessX + LockerX + LockerX
+                GuessX = math.ceil(GuessX)
+                GuessX = abs(GuessX)
+                GuessX = clampX(GuessX, 0, 200)
+                Guess += 1
+                LockerX -= 1
+                if (Debug == 1 or Debug == 2):
+                    print("X is Else")
 
         if YValue <= GuessY:
             GuessY = GuessY / 2
@@ -176,18 +176,18 @@ while not done:
             if (Debug == 1 or Debug == 2):
                 print("Y is True")
 
-        else:
-            GuessY = GuessY/2
-            if Guess >= 2:
-                LockerY -= 8
-            GuessY = GuessY + GuessY + LockerY + LockerY
-            GuessY = math.ceil(GuessY)
-            GuessY = abs(GuessY)
-            GuessY = clampY(GuessY, 0, 100)
-            Guess += 1
-            LockerY -= 1
-            if (Debug == 1 or Debug == 2):
-                print("Y is Else")
+            else:
+                GuessY = GuessY/2
+                if Guess >= 2:
+                    LockerY -= 8
+                GuessY = GuessY + GuessY + LockerY + LockerY
+                GuessY = math.ceil(GuessY)
+                GuessY = abs(GuessY)
+                GuessY = clampY(GuessY, 0, 100)
+                Guess += 1
+                LockerY -= 1
+                if (Debug == 1 or Debug == 2):
+                    print("Y is Else")
 
     #pygame.draw.rect(screen, BLUE, ErrorAreap)
     pygame.display.flip()
