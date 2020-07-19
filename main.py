@@ -40,11 +40,13 @@ for row in range(301): #X
 # column numbers start at zero.)
 XValue = random.randint(0,100)
 YValue = random.randint(0,200)
+#XValue = 100
+#YValue = 50
 print("Blue X is:")
 print(XValue)
 print("Blue Y is:")
 print(YValue)
-grid[XValue][YValue] = 3
+grid[YValue][XValue] = 3
 #grid[XValue + 1][YValue - 1] = 3
 #ErrorAreap = pygame.Rect(XValue - 5, YValue+ 10, 20, 10)
 # Initialize pygame
@@ -141,53 +143,64 @@ while not done:
     if (GuessX == XValue and GuessY == YValue):
         print("Done")
         print(Guess)
-
+    
     else:
-        time.sleep(1)
-        if XValue <= GuessX:
-            GuessX = GuessX / 2
-            GuessX = math.ceil(GuessX)
-            GuessX = abs(GuessX)
-            GuessX = clampX(GuessX, 0, 200)
-            Guess += 1
-            if (Debug == 1 or Debug == 2):
-                print("X is True")
+        if (GuessX == XValue):
+            pass
+        else:
+            time.sleep(1)
+            if XValue <= GuessX:
+                #GuessX = GuessX / 2
+                #GuessX = math.ceil(GuessX)
+                #GuessX = abs(GuessX)
+                #GuessX = clampX(GuessX, 0, 200)
+                GuessX -= 1
+                Guess += 1
+                if (Debug == 1 or Debug == 2):
+                    print("X is True")
             
 
-        else:
-            GuessX = GuessX/2
-            if Guess >= 2:
-                LockerX -= 8
-            GuessX = GuessX + GuessX + LockerX + LockerX
-            GuessX = math.ceil(GuessX)
-            GuessX = abs(GuessX)
-            GuessX = clampX(GuessX, 0, 200)
-            Guess += 1
-            LockerX -= 1
-            if (Debug == 1 or Debug == 2):
-                print("X is Else")
+            else:
+                #GuessX = GuessX/2
+                #if Guess >= 2:
+                    #LockerX -= 8
+                #GuessX = GuessX + GuessX + LockerX + LockerX
+                #GuessX = math.ceil(GuessX)
+                #GuessX = abs(GuessX)
+                #GuessX = clampX(GuessX, 0, 200)
+                GuessX += 1
+                Guess += 1
+                LockerX -= 1
+                if (Debug == 1 or Debug == 2):
+                    print("X is Else")
 
-        if YValue <= GuessY:
-            GuessY = GuessY / 2
-            GuessY = math.ceil(GuessY)
-            GuessY = abs(GuessY)
-            GuessY = clampY(GuessY, 0, 100)
-            Guess += 1
-            if (Debug == 1 or Debug == 2):
-                print("Y is True")
-
+        if (GuessY == YValue):
+            pass
         else:
-            GuessY = GuessY/2
-            if Guess >= 2:
-                LockerY -= 8
-            GuessY = GuessY + GuessY + LockerY + LockerY
-            GuessY = math.ceil(GuessY)
-            GuessY = abs(GuessY)
-            GuessY = clampY(GuessY, 0, 100)
-            Guess += 1
-            LockerY -= 1
-            if (Debug == 1 or Debug == 2):
-                print("Y is Else")
+            if YValue <= GuessY:
+                #GuessX = GuessX / 2
+                #GuessX = math.ceil(GuessX)
+                #GuessX = abs(GuessX)
+                #GuessX = clampX(GuessX, 0, 200)
+                GuessY -= 1
+                Guess += 1
+                if (Debug == 1 or Debug == 2):
+                    print("Y is True")
+            
+
+            else:
+                #GuessX = GuessX/2
+                #if Guess >= 2:
+                    #LockerX -= 8
+                #GuessX = GuessX + GuessX + LockerX + LockerX
+                #GuessX = math.ceil(GuessX)
+                #GuessX = abs(GuessX)
+                #GuessX = clampX(GuessX, 0, 200)
+                GuessY += 1
+                Guess += 1
+                LockerY -= 1
+                if (Debug == 1 or Debug == 2):
+                    print("Y is Else")
 
     #pygame.draw.rect(screen, BLUE, ErrorAreap)
     pygame.display.flip()
